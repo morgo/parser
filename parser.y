@@ -6208,13 +6208,13 @@ FlushStmt:
 	}
 
 FlushOption:
-"HOSTS"
+	"HOSTS"
 	{
 		$$ = &ast.FlushStmt{
 			Tp: ast.FlushHosts,
 		}
 	}
-| "LOGS"
+|	"LOGS"
 	{
 		$$ = &ast.FlushStmt{
 			Tp: ast.FlushLogs,
