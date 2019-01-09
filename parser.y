@@ -6211,13 +6211,13 @@ FlushOption:
 "HOSTS"
 	{
 		$$ = &ast.FlushStmt{
-			Tp: ast.FlushPrivileges,
+			Tp: ast.FlushHosts,
 		}
 	}
 | "LOGS"
 	{
 		$$ = &ast.FlushStmt{
-			Tp: ast.FlushPrivileges,
+			Tp: ast.FlushLogs,
 		}
 	}
 |	"PRIVILEGES"

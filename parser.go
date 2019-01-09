@@ -11420,13 +11420,13 @@ yynewstate:
 	case 1131:
 		{
 			parser.yyVAL.item = &ast.FlushStmt{
-				Tp: ast.FlushPrivileges,
+				Tp: ast.FlushHosts,
 			}
 		}
 	case 1132:
 		{
 			parser.yyVAL.item = &ast.FlushStmt{
-				Tp: ast.FlushPrivileges,
+				Tp: ast.FlushLogs,
 			}
 		}
 	case 1133:
