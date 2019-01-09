@@ -326,6 +326,7 @@ import (
 	function	"FUNCTION"
 	grants		"GRANTS"
 	hash		"HASH"
+	hosts		"HOSTS"
 	hour		"HOUR"
 	identified	"IDENTIFIED"
 	isolation	"ISOLATION"
@@ -334,6 +335,7 @@ import (
 	jsonType	"JSON"
 	keyBlockSize	"KEY_BLOCK_SIZE"
 	local		"LOCAL"
+	logs		"LOGS"
 	last		"LAST"
 	less		"LESS"
 	level		"LEVEL"
@@ -6206,7 +6208,19 @@ FlushStmt:
 	}
 
 FlushOption:
-	"PRIVILEGES"
+"HOSTS"
+	{
+		$$ = &ast.FlushStmt{
+			Tp: ast.FlushPrivileges,
+		}
+	}
+| "LOGS"
+	{
+		$$ = &ast.FlushStmt{
+			Tp: ast.FlushPrivileges,
+		}
+	}
+|	"PRIVILEGES"
 	{
 		$$ = &ast.FlushStmt{
 			Tp: ast.FlushPrivileges,
