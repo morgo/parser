@@ -409,6 +409,8 @@ type FlushStmtType int
 // Flush statement types.
 const (
 	FlushNone FlushStmtType = iota
+	FlushHosts
+	FlushLogs
 	FlushTables
 	FlushPrivileges
 	FlushStatus
